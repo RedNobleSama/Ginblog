@@ -3,7 +3,7 @@
     <v-app-bar app color="indigo darken-2" flat>
       <v-container class="py-0 fill-height">
         <v-avatar class="mx-12" size="40" color="grey"></v-avatar>
-        <v-btn text color="white" @click="$router.push('/#')">首页</v-btn>
+        <v-btn text color="white" @click="$router.push('/')">首页</v-btn>
         <v-btn v-for="item in cateList" :key="item.id" text color="white">{{item.name}}</v-btn>
       </v-container>
 

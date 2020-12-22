@@ -75,7 +75,7 @@ func GetCate(c *gin.Context) {
 
 // 查询单个分类
 //func GetCateInfo(c *gin.Context)  {
-//	id, _ := strconv.Atoi(c.Param("id"))
+//	id, _ := strconv.Aoi(c.Param("id"))
 //
 //	data,code := model.GetCateInfo(id)
 //
