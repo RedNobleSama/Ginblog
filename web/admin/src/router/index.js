@@ -46,12 +46,37 @@ const routes = [
     component: Admin,
     children: [
       { path: 'index', component: Index },
-      { path: 'addart', component: AddArt },
-      { path: 'addart/:id', component: AddArt, props: true },
-      { path: 'artlist', component: ArtList },
+      {
+        path: 'addart',
+        component: AddArt,
+        meta: {
+          title: '添加文章'
+        }
+      },
+      {
+        path: 'addart/:id',
+        component: AddArt,
+        props: true,
+        meta: {
+          title: '编辑文章'
+        }
+      },
+      {
+        path: 'artlist',
+        component: ArtList,
+        meta: {
+          title: '文章列表'
+        }
+      },
       { path: 'catelist', component: CateList },
       { path: 'userlist', component: UserList },
-      { path: 'profile', component: Setting }
+      {
+        path: 'profile',
+        component: Setting,
+        meta: {
+          title: '个人设置'
+        }
+      }
     ]
   }
 ]
@@ -61,8 +86,8 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.meta && to.meta.title) {
-    window.document.title = to.meta.title
+  if (to.meta.title) {
+    document.title = to.meta.title
   }
 
   const token = window.sessionStorage.getItem('token')

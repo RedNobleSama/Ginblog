@@ -28,7 +28,7 @@ func GetProfile(id int) (Profile,int) {
 
 func UpdateProfile(data *Profile) int {
 	var profile Profile
-	err = db.Where("id = ?",1).Model(&profile).Updates(data).Error
+	err = db.Where("ID = ?",1).Model(&profile).Updates(data).Error
 	if err != nil{
 		return errmsg.ERROR
 	}

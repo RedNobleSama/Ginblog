@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto" max-width="300">
+  <v-card class="mx-auto" max-width="350">
     <v-img src="../assets/bluebg.png">
       <v-card-title>
         <v-col align="center">
@@ -17,47 +17,40 @@
     <v-card-text>{{profile.desc}}</v-card-text>
     <v-divider color="indigo"></v-divider>
 
-    <v-list nav dense>
+    <v-list dense>
       <v-list-item>
         <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-qqchat'}}</v-icon>
+          <v-icon color="primary">{{'mdi-qqchat'}}</v-icon>
         </v-list-item-icon>
         <v-list-item-content class="grey--text">{{profile.qq_chat}}</v-list-item-content>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-wechat'}}</v-icon>
+          <v-icon color="green darken-2">{{'mdi-wechat'}}</v-icon>
         </v-list-item-icon>
         <v-list-item-content class="grey--text">{{profile.wechat}}</v-list-item-content>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-sina-weibo'}}</v-icon>
+          <v-icon color="deep-orange">{{'mdi-sina-weibo'}}</v-icon>
         </v-list-item-icon>
-        <v-list-item-content class="grey--text">12334566</v-list-item-content>
+        <v-list-item-content class="grey--text">{{profile.weibo}}</v-list-item-content>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-youtube-tv'}}</v-icon>
+          <v-icon color="blue darken-3">{{'mdi-youtube-tv'}}</v-icon>
         </v-list-item-icon>
         <v-list-item-content class="grey--text">{{profile.bili}}</v-list-item-content>
       </v-list-item>
 
       <v-list-item>
         <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-twitter'}}</v-icon>
+          <v-icon color="yellow darken-3">{{'mdi-email'}}</v-icon>
         </v-list-item-icon>
-        <v-list-item-content class="grey--text">12334566</v-list-item-content>
-      </v-list-item>
-
-      <v-list-item>
-        <v-list-item-icon class="ma-3">
-          <v-icon>{{'mdi-email'}}</v-icon>
-        </v-list-item-icon>
-        <v-list-item-content class="grey--text">12334566</v-list-item-content>
+        <v-list-item-content class="grey--text">{{profile.email}}</v-list-item-content>
       </v-list-item>
     </v-list>
   </v-card>
