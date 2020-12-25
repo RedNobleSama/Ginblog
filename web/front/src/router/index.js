@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import ArtList from '../components/aticleList.vue'
+import Detail from '../components/detail.vue'
 
 Vue.use(VueRouter)
 
@@ -24,6 +25,14 @@ const routes = [
         meta: {
           title: '欢迎来到GinBlog'
         }
+      },
+      {
+        path: '/details/:id',
+        component: Detail,
+        meta: {
+          title: '文章详情'
+        },
+        props: true
       }
     ]
   }
